@@ -1,0 +1,76 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"organizeImports": "on",
+				"useSortedAttributes": "on",
+				"useSortedProperties": "on"
+			}
+		},
+		"enabled": true
+	},
+	"css": {
+		"linter": {
+			"enabled": false
+		},
+		"parser": {
+			"tailwindDirectives": true
+		}
+	},
+	"files": {
+    "ignoreOnScan": [
+      "node_modules/**",
+      "dist/**",
+      "build/**",
+      ".next/**",
+      "out/**"
+    ]
+  },
+	"formatter": {
+		"enabled": true,
+		"indentStyle": "tab",
+		"lineWidth": 120
+	},
+	"javascript": {
+		"formatter": {
+			"jsxQuoteStyle": "double",
+			"quoteStyle": "single"
+		}
+	},
+	"linter": {
+		"domains": {
+			"next": "all",
+			"react": "all"
+		},
+		"enabled": true,
+		"rules": {
+			"correctness": {
+				"noUnusedImports": "error",
+				"noUnusedVariables": "error",
+				"useExhaustiveDependencies": "warn",
+				"useUniqueElementIds": "off"
+			},
+			"recommended": true,
+			"style": {
+				"noRestrictedImports": {
+					"level": "error",
+					"options": {
+						"paths": {
+							"lodash": "import { isNil, isEmpty, and others } from 'lodash' are restricted. Please use 'lodash/isNil', 'lodash/isEmpty', and others instead."
+						}
+					}
+				},
+				"useComponentExportOnlyModules": "off"
+			},
+			"suspicious": {
+				"noExplicitAny": "error"
+			}
+		}
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": false,
+		"useIgnoreFile": false
+	}
+}

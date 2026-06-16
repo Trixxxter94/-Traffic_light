@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { ToDoButton } from "./ToDoButton";
-import { ToDoInput } from "./ToDoInput";
+import { Button } from "../shared/ui/Button";
+import { Input } from "../shared/ui/Input";
 import styles from "./ToDoList.module.css";
 import type { TodoData } from "./ToDoList.type";
 
@@ -45,7 +45,7 @@ export const AddToDo = ({ ToDoItems, onAddTodo }: AddToDoProps) => {
 			<h1 className={styles.ToDoListH1}>ToDo List</h1>
 			<div className={styles.buttonAndInputContainer}>
 				<div className={styles.inputAndErrorsContainer}>
-					<ToDoInput
+					<Input
 						className={styles.inputStyle}
 						type="text"
 						placeholder="New Task"
@@ -60,13 +60,13 @@ export const AddToDo = ({ ToDoItems, onAddTodo }: AddToDoProps) => {
 
 					<p className={styles.errorsStyle}>{taskTitleError}</p>
 				</div>
-				<ToDoButton
+				<Button
 					className={styles.addButtonStyle}
 					type="button"
 					onClick={() => handleAddTodo()}
 				>
 					Add
-				</ToDoButton>
+				</Button>
 			</div>
 		</div>
 	);

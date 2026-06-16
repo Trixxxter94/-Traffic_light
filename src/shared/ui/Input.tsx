@@ -2,13 +2,13 @@ type ToDoInputProps = {
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 	onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
 	type: React.InputHTMLAttributes<HTMLInputElement>["type"];
-	className: string;
+	className?: string;
 	placeholder?: string;
 	inputValue?: string;
 	checked?: boolean;
 };
 
-export const ToDoInput = ({
+export const Input = ({
 	onChange,
 	onKeyDown,
 	type,

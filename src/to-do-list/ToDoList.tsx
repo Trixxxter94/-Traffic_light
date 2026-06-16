@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Button } from "../shared/ui/Button";
 import { AddToDo } from "./AddToDo";
-import { ToDoButton } from "./ToDoButton";
-import { ToDoLi } from "./ToDoLi";
 import styles from "./ToDoList.module.css";
 import type { TodoData } from "./ToDoList.type";
+import { TodoListItem } from "./TodoListItem";
 
 export const ToDoList = () => {
 	const stored = localStorage.getItem("ToDoItems");
@@ -47,15 +47,15 @@ export const ToDoList = () => {
 				}
 			/>
 			<div className={styles.tasksContainer}>
-				<ToDoButton onClick={FilterByDay} type="button" className="">
+				<Button onClick={FilterByDay} type="button" className="">
 					Sort by Date
-				</ToDoButton>
-				<ToDoButton onClick={FilterByCompleted} type="button" className="">
+				</Button>
+				<Button onClick={FilterByCompleted} type="button" className="">
 					Sort by Completed
-				</ToDoButton>
+				</Button>
 				<ul className={styles.ulStyle}>
 					{Object.values(todoItems).map((tasks) => (
-						<ToDoLi
+						<TodoListItem
 							key={tasks.task}
 							tasks={tasks}
 							onChange={() => {

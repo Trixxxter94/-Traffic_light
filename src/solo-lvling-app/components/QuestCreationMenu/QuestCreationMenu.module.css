@@ -1,0 +1,4 @@
+.QuestCreationMenu {
+	display: flex;
+	flex-direction: column;
+}

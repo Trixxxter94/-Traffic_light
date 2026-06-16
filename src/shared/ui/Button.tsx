@@ -1,11 +1,11 @@
 type ToDoButtonProps = {
 	onClick: () => void;
 	type: React.ButtonHTMLAttributes<HTMLButtonElement>["type"];
-	className: string;
+	className?: string;
 	children: React.ReactNode;
 };
 
-export const ToDoButton = ({
+export const Button = ({
 	onClick,
 	type,
 	className,
